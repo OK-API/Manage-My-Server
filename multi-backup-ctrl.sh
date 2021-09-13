@@ -82,10 +82,10 @@ checkTrackingFile() {
                         # We consider this a successful execution of the script, assuming that it is being called regulary using e.g. a cronjob.
                         exit 0
                 else
-                        log "$logRegularExecFileName" "INFO" "trackingFile Date is bigger or equal than 86400 seconds (24hrs). Age is $timeDiff. Backup will be started now. For a detailed backup log see: $logdir$logFileName"
+                        log "$logRegularExecFileName" "INFO" "trackingFile Date is bigger or equal than 86400 seconds (24hrs). Age is $timeDiff. Backup will be started now. For a detailed backup log see: $logdir/$logFileName"
                 fi
         else
-                log "$logRegularExecFileName" "INFO" "Tracking file $trackingFile not found. Assuming first or force run. Starting backup. For a detailed backup log see: $logdir$logFileName"
+                log "$logRegularExecFileName" "INFO" "Tracking file $trackingFile not found. Assuming first or force run. Starting backup. For a detailed backup log see: $logdir/$logFileName"
         fi
 }
 
